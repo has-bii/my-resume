@@ -70,11 +70,11 @@ function usePhotoGallery(initialFilter: PhotoType = 'landscape') {
 
   // Prefetch all images for the current filter
   useEffect(() => {
-    filteredItems.forEach((item) => {
+    PHOTO_ITEMS.forEach((item) => {
       const img = new Image()
       img.src = item.url
     })
-  }, [filteredItems])
+  }, [])
 
   const handleFilterChange = (newFilter: PhotoType) => {
     setSelectedIndex(0)
