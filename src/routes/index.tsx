@@ -12,9 +12,9 @@ function App() {
   return (
     <div className="grid h-fit w-full grid-cols-1 gap-4 lg:grid-cols-3 xl:grid-cols-4 xl:grid-rows-3">
       <About />
-      <Experiences />
       <Contacts />
       <Photos />
+      <Experiences />
     </div>
   )
 }
