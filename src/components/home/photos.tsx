@@ -1,8 +1,8 @@
 import { cn } from '@/lib/utils'
-import { Cat, CircleUser, Image, type LucideIcon, Puzzle } from 'lucide-react'
+import { Cat, CircleUser, ImageIcon, type LucideIcon, Puzzle } from 'lucide-react'
 import { AnimatePresence, type Variants, useAnimate, wrap } from 'motion/react'
 import * as motion from 'motion/react-client'
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 import Card from '../card'
 
@@ -46,7 +46,7 @@ const PHOTO_ITEMS: Item[] = [
 ]
 
 const FILTER_ITEMS: FilterItem[] = [
-  { type: 'landscape', icon: Image },
+  { type: 'landscape', icon: ImageIcon },
   { type: 'me', icon: CircleUser },
   { type: 'hobby', icon: Puzzle },
   { type: 'cat', icon: Cat },
@@ -67,6 +67,14 @@ function usePhotoGallery(initialFilter: PhotoType = 'landscape') {
   const filteredItems = useMemo(() => PHOTO_ITEMS.filter((item) => item.type === filter), [filter])
 
   const currentItem = useMemo(() => filteredItems[selectedIndex], [selectedIndex, filteredItems])
+
+  // Prefetch all images for the current filter
+  useEffect(() => {
+    filteredItems.forEach((item) => {
+      const img = new Image()
+      img.src = item.url
+    })
+  }, [filteredItems])
 
   const handleFilterChange = (newFilter: PhotoType) => {
     setSelectedIndex(0)
