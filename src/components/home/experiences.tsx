@@ -81,7 +81,10 @@ export default function Experiences() {
   const [selectedExp, setSelectedExp] = useState<ExperienceItem | null>(null)
 
   return (
-    <Card className="group aspect-square w-full border-0 bg-black/75 p-0 tracking-wider xl:col-span-2 xl:aspect-2/1">
+    <Card
+      key="experiences"
+      className="group aspect-square w-full border-0 bg-black/75 p-0 tracking-wider lg:col-span-3 lg:aspect-3/1 xl:col-span-2 xl:aspect-2/1"
+    >
       <div className="flex h-full w-full flex-col overflow-hidden rounded-4xl bg-yellow-50 transition-all group-hover:mt-0 group-hover:ml-0 lg:mt-8 lg:ml-8">
         <div className="sticky top-0 h-12 w-full shrink-0 bg-linear-to-b from-yellow-300 to-yellow-400" />
 

@@ -26,7 +26,7 @@ const items = [
 
 export default function Contacts() {
   return (
-    <Card className="flex aspect-square w-full items-center justify-center">
+    <Card key="contacts" className="flex aspect-square w-full items-center justify-center">
       <div className="bg-background flex h-20 w-fit items-center gap-2 rounded-2xl border p-2 shadow-xl">
         {items.map((item) => (
           <Tooltip key={item.label}>

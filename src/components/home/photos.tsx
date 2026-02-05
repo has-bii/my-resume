@@ -147,7 +147,7 @@ export default function Photos() {
   }
 
   return (
-    <Card className="aspect-square w-full border-0 p-0">
+    <Card key="photos" className="aspect-square w-full border-0 p-0">
       <motion.div
         className="relative h-full w-full cursor-pointer"
         onHoverStart={handleMouseEnter}

@@ -2,7 +2,10 @@ import Card from '../card'
 
 export default function About() {
   return (
-    <Card className="row-span-2 flex h-full flex-col justify-between gap-12 tracking-wider lg:col-span-2">
+    <Card
+      key="about"
+      className="row-span-2 flex h-full flex-col justify-between gap-12 tracking-wider lg:col-span-2"
+    >
       <h1 className="text-foreground text-3xl font-semibold">Hey there, Welcome to my Home 👋🏻</h1>
 
       <p className="text-muted-foreground text-xl font-light text-pretty">

@@ -10,7 +10,7 @@ type Item = {
 
 const items: Item[] = [
   { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
+  { label: 'Projects', href: '/projects' },
 ]
 
 export default function Nav() {
@@ -33,8 +33,8 @@ export default function Nav() {
           key={item.href}
           to={item.href}
           className={cn(
-            'text-muted-foreground z-10 flex h-14 w-32 items-center justify-center rounded-full text-lg font-medium',
-            pathname.href === item.href && 'text-foreground font-semibold',
+            'text-muted-foreground z-10 flex h-14 w-32 items-center justify-center rounded-full text-lg font-light',
+            pathname.href === item.href && 'text-foreground font-medium',
           )}
         >
           {item.label}
