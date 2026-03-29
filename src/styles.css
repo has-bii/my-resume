@@ -188,6 +188,12 @@
   [role='button']:not(:disabled) {
     cursor: pointer;
   }
+  * {
+    scrollbar-width: none;
+  }
+  *::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 @theme {
