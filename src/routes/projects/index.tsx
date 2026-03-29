@@ -11,7 +11,7 @@ export const Route = createFileRoute('/projects/')({
 function RouteComponent() {
   return (
     <motion.div
-      className="grid h-fit w-full grid-cols-1 gap-4 lg:grid-cols-3 xl:grid-cols-4"
+      className="grid h-fit w-full grid-cols-1 gap-4 lg:grid-cols-4"
       variants={containerVariants}
       initial="hidden"
       animate="visible"

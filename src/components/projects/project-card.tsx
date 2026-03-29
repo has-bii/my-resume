@@ -8,7 +8,7 @@ type Props = {
 
 export default function ProjectCard({ data }: Props) {
   return (
-    <Card className="col-span-2 row-span-2 p-0">
+    <Card className="p-0 lg:col-span-2 lg:row-span-2">
       <figure className="relative aspect-video w-full">
         <img
           src={data.image}
