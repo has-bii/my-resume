@@ -41,6 +41,7 @@ const projects = [
   },
   {
     name: 'Sales Management System',
+    client: 'Naratani',
     stack: 'NestJS, React, PostgreSQL, React Native, NextJS, TailwindCSS',
     description:
       'A complete system including backend, admin dashboard, and mobile app for a corporate sales team.',
